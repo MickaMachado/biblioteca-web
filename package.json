@@ -1,0 +1,7 @@
+{
+  "name": "biblioteca-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistema de gerenciamento de biblioteca desenvolvido com HTML, CSS e JavaScript.",
+  "type": "module"
+}

@@ -1,0 +1,207 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #24332b;
+  background-color: #f5f7f4;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+/* ESTRUTURA DA PÁGINA */
+
+.pagina-login {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* APRESENTAÇÃO */
+
+.apresentacao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2rem, 6vw, 6rem);
+  background-color: #244b38;
+  color: #ffffff;
+}
+
+.identificacao {
+  margin-bottom: 1.5rem;
+  color: #c7ddc5;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+}
+
+.apresentacao h1 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.apresentacao p {
+  max-width: 28rem;
+  color: #e0e9e2;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+/* ÁREA DO FORMULÁRIO */
+
+.area-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+
+.cartao-login {
+  width: 100%;
+  max-width: 26rem;
+  padding: 2.5rem;
+  border: 1px solid #dde5dd;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 1rem 3rem rgb(36 75 56 / 6%);
+}
+
+.cartao-login h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.75rem;
+}
+
+.descricao-login {
+  margin-bottom: 2rem;
+  color: #626d65;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* CAMPOS */
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.campo label {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.campo input {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid #bdc9bf;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  color: #24332b;
+}
+
+.campo input::placeholder {
+  color: #747d76;
+}
+
+.campo input:focus-visible {
+  border-color: #356b4b;
+  outline: 3px solid #dcebdd;
+  outline-offset: 2px;
+}
+
+/* FEEDBACK */
+
+.mensagem {
+  margin-bottom: 1rem;
+  color: #a32424;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.mensagem:empty {
+  display: none;
+}
+
+/* BOTÃO E LINK */
+
+.botao-entrar {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.85rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #356b4b;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.botao-entrar:hover {
+  background-color: #244b38;
+}
+
+.botao-entrar:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.botao-entrar:focus-visible,
+.link-senha:focus-visible {
+  outline: 3px solid #356b4b;
+  outline-offset: 4px;
+}
+
+.link-senha {
+  display: block;
+  width: fit-content;
+  margin: 1.5rem auto 0;
+  color: #356b4b;
+  font-size: 0.9rem;
+  text-underline-offset: 0.2rem;
+}
+
+/* CELULAR */
+
+@media (max-width: 767px) {
+  .pagina-login {
+    grid-template-columns: 1fr;
+  }
+
+  .apresentacao {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .apresentacao h1 {
+    font-size: 2.5rem;
+  }
+
+  .apresentacao p {
+    font-size: 1rem;
+  }
+
+  .area-login {
+    padding: 2rem 1rem;
+  }
+
+  .cartao-login {
+    padding: 1.75rem;
+  }
+}

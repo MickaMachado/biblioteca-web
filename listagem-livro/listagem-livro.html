@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Listagem de livros | Biblioteca Web</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="./listagem-livro.css">
+
+  <script type="module" src="./listagem-livro.js"></script>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <a class="nome-sistema" href="../dashboard/dashboard.html">
+      BIBLIOTECA WEB
+    </a>
+
+    <p class="usuario">
+      Olá, <span id="nome-usuario"></span>
+    </p>
+  </header>
+
+  <div class="estrutura">
+    <aside class="menu-lateral">
+      <nav aria-label="Menu principal">
+        <a
+          href="../dashboard/dashboard.html"
+          class="link-menu"
+        >
+          Dashboard
+        </a>
+
+        <a
+          href="../cadastro-usuario/cadastro-usuario.html"
+          class="link-menu"
+        >
+          Cadastro de usuários
+        </a>
+
+        <a
+          href="../cadastro-livro/cadastro-livro.html"
+          class="link-menu"
+        >
+          Cadastro de livros
+        </a>
+
+        <a
+          href="./listagem-livro.html"
+          class="link-menu"
+          aria-current="page"
+        >
+          Listar livros
+        </a>
+
+        <button class="link-menu" type="button" disabled>
+          Realizar empréstimo
+        </button>
+
+        <button class="link-menu" type="button" disabled>
+          Realizar devolução
+        </button>
+
+        <button
+          id="botao-sair"
+          class="link-menu botao-sair"
+          type="button"
+        >
+          Sair
+        </button>
+      </nav>
+    </aside>
+
+    <main class="conteudo">
+      <div class="titulo-pagina">
+        <p class="sobretitulo">ACERVO</p>
+        <h1>Listagem de livros</h1>
+        <p>Consulte os livros cadastrados na biblioteca.</p>
+      </div>
+
+      <p
+        id="mensagem-listagem"
+        class="mensagem-listagem"
+        role="status"
+        aria-live="polite"
+      >
+        Carregando livros...
+      </p>
+
+      <div
+        class="area-tabela"
+        role="region"
+        aria-label="Acervo da biblioteca"
+        tabindex="0"
+      >
+        <table class="tabela-livros">
+          <caption>Livros cadastrados</caption>
+
+          <thead>
+            <tr>
+              <th scope="col">Título</th>
+              <th scope="col">Autor</th>
+              <th scope="col">Categoria</th>
+              <th scope="col" class="coluna-paginas">
+                Número de páginas
+              </th>
+            </tr>
+          </thead>
+
+          <tbody id="corpo-tabela"></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

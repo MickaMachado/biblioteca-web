@@ -1,0 +1,51 @@
+.estatisticas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid #dde5dd;
+  border-top: 4px solid #356b4b;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  box-shadow: 0 0.25rem 1rem rgb(36 75 56 / 4%);
+}
+
+.card h2 {
+  margin-bottom: 1.25rem;
+  color: #526057;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.valor {
+  margin-bottom: 0.75rem;
+  color: #244b38;
+  font-size: 2.5rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.descricao-card {
+  color: #626d65;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+#mensagem-dashboard {
+  margin-bottom: 1.5rem;
+  color: #a32424;
+  line-height: 1.5;
+}
+
+#mensagem-dashboard:empty {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .estatisticas {
+    grid-template-columns: 1fr;
+  }
+}

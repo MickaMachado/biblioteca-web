@@ -1,0 +1,76 @@
+.area-tabela {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #dde5dd;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+}
+
+.area-tabela:focus-visible {
+  outline: 3px solid #356b4b;
+  outline-offset: 3px;
+}
+
+.tabela-livros {
+  width: 100%;
+  min-width: 40rem;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tabela-livros caption {
+  padding: 1.25rem;
+  color: #244b38;
+  font-weight: 700;
+  text-align: left;
+}
+
+.tabela-livros th {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #dde5dd;
+  background-color: #e5efe4;
+  color: #244b38;
+  font-size: 0.9rem;
+}
+
+.tabela-livros td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #e8ede7;
+  color: #44544a;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.tabela-livros tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tabela-livros tbody tr:nth-child(even) {
+  background-color: #f8faf7;
+}
+
+.tabela-livros tbody tr:hover {
+  background-color: #f0f5ef;
+}
+
+.coluna-paginas {
+  text-align: right;
+}
+
+.mensagem-listagem {
+  margin-bottom: 1rem;
+  color: #626d65;
+  line-height: 1.5;
+}
+
+.mensagem-listagem.erro {
+  color: #a32424;
+}
+
+@media (max-width: 767px) {
+  .tabela-livros th,
+  .tabela-livros td {
+    padding: 0.85rem;
+  }
+}
