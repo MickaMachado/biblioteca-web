@@ -1,0 +1,202 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #24332b;
+  background-color: #f5f7f4;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 2rem;
+  background-color: #244b38;
+  color: #ffffff;
+}
+
+.nome-sistema {
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.04rem;
+}
+
+.usuario {
+  font-size: 0.95rem;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+/* ESTRUTURA DAS PÁGINAS */
+
+.estrutura {
+  min-height: calc(100vh - 5rem);
+  display: grid;
+  grid-template-columns: 15rem minmax(0, 1fr);
+}
+
+/* MENU LATERAL */
+
+.menu-lateral {
+  padding: 1.5rem 1rem;
+  border-right: 1px solid #dde5dd;
+  background-color: #ffffff;
+}
+
+.menu-lateral nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.link-menu {
+  display: block;
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: #44544a;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link-menu:hover:not(:disabled) {
+  background-color: #f0f5ef;
+  color: #244b38;
+}
+
+.link-menu[aria-current="page"] {
+  background-color: #e5efe4;
+  color: #244b38;
+  font-weight: 700;
+}
+
+.link-menu:disabled {
+  color: #767e78;
+  cursor: not-allowed;
+}
+
+.botao-sair {
+  margin-top: 1rem;
+  color: #a32424;
+}
+
+/* CONTEÚDO */
+
+.conteudo {
+  min-width: 0;
+  padding: 2.5rem;
+}
+
+.titulo-pagina {
+  margin-bottom: 2rem;
+}
+
+.sobretitulo {
+  margin-bottom: 0.75rem;
+  color: #356b4b;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12rem;
+}
+
+.titulo-pagina h1 {
+  margin-bottom: 0.75rem;
+  font-size: 2rem;
+}
+
+.titulo-pagina > p:last-child {
+  color: #626d65;
+  line-height: 1.6;
+}
+
+/* ACESSIBILIDADE */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #356b4b;
+  outline-offset: 3px;
+}
+
+.cabecalho a:focus-visible {
+  outline-color: #ffffff;
+}
+
+/* CELULAR */
+
+@media (max-width: 767px) {
+  .cabecalho {
+    padding: 1rem;
+  }
+
+  .nome-sistema {
+    font-size: 1rem;
+  }
+
+  .usuario {
+    font-size: 0.85rem;
+  }
+
+  .estrutura {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-lateral {
+    padding: 1rem;
+    border-right: none;
+    border-bottom: 1px solid #dde5dd;
+  }
+
+  .menu-lateral nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .link-menu {
+    height: 100%;
+    padding: 0.75rem;
+  }
+
+  .botao-sair {
+    margin-top: 0;
+  }
+
+  .conteudo {
+    padding: 1.5rem 1rem;
+  }
+
+  .titulo-pagina h1 {
+    font-size: 1.75rem;
+  }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dashboard | Biblioteca Web</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="./dashboard.css">
+
+  <script type="module" src="./dashboard.js"></script>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <a class="nome-sistema" href="./dashboard.html">
+      BIBLIOTECA WEB
+    </a>
+
+    <p class="usuario">
+      Olá, <span id="nome-usuario"></span>
+    </p>
+  </header>
+
+  <div class="estrutura">
+    <aside class="menu-lateral">
+      <nav aria-label="Menu principal">
+        <a
+          href="./dashboard.html"
+          class="link-menu"
+          aria-current="page"
+        >
+          Dashboard
+        </a>
+
+        <a
+          href="../cadastro-usuario/cadastro-usuario.html"
+          class="link-menu"
+        >
+          Cadastro de usuários
+        </a>
+
+        <a
+          href="../cadastro-livro/cadastro-livro.html"
+          class="link-menu"
+        >
+          Cadastro de livros
+        </a>
+
+        <a
+          href="../listagem-livro/listagem-livro.html"
+          class="link-menu"
+        >
+          Listar livros
+        </a>
+
+        <button class="link-menu" type="button" disabled>
+          Realizar empréstimo
+        </button>
+
+        <button class="link-menu" type="button" disabled>
+          Realizar devolução
+        </button>
+
+        <button
+          id="botao-sair"
+          class="link-menu botao-sair"
+          type="button"
+        >
+          Sair
+        </button>
+      </nav>
+    </aside>
+
+    <main class="conteudo">
+      <div class="titulo-pagina">
+        <p class="sobretitulo">VISÃO GERAL</p>
+        <h1>Dashboard</h1>
+        <p>Acompanhe os números do acervo da biblioteca.</p>
+      </div>
+
+      <p id="mensagem-dashboard" role="alert"></p>
+
+      <section
+        class="estatisticas"
+        aria-label="Estatísticas do acervo"
+      >
+        <article class="card">
+          <h2>Total de livros</h2>
+          <p id="total-livros" class="valor">—</p>
+          <p class="descricao-card">Livros cadastrados no acervo</p>
+        </article>
+
+        <article class="card">
+          <h2>Livros disponíveis</h2>
+          <p id="livros-disponiveis" class="valor">—</p>
+          <p class="descricao-card">Disponíveis para empréstimo</p>
+        </article>
+
+        <article class="card">
+          <h2>Livros indisponíveis</h2>
+          <p id="livros-indisponiveis" class="valor">—</p>
+          <p class="descricao-card">Indisponíveis para empréstimo</p>
+        </article>
+
+        <article class="card">
+          <h2>Total de páginas</h2>
+          <p id="total-paginas" class="valor">—</p>
+          <p class="descricao-card">Soma das páginas de todos os livros</p>
+        </article>
+
+        <article class="card">
+          <h2>Média de páginas</h2>
+          <p id="media-paginas" class="valor">—</p>
+          <p class="descricao-card">Quantidade média por livro</p>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
